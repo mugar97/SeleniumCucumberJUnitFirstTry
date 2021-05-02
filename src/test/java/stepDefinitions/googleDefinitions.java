@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.GooglePage;
-import utils.DriverManager;
+import utils.driver.DriverManager;
 
 public class googleDefinitions {
 
