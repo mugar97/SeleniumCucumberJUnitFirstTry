@@ -1,5 +1,7 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,7 +31,7 @@ public class GooglePage {
     public void checkTitle(String titleStartsWith) {
         // Google's search is rendered dynamically with JavaScript
         // Wait for the page to load timeout after ten seconds
-        new WebDriverWait(driver, 10L).until(new ExpectedCondition<Boolean>() {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().startsWith(titleStartsWith);
             }
