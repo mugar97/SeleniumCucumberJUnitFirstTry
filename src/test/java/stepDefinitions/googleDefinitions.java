@@ -24,7 +24,7 @@ public class googleDefinitions {
 
     @Given("I am on the Google search page")
     public void I_visit_google() {
-        mainPage.visitGoogle();
+        browserPage.open();
     }
 
     @When("I search for {string}")

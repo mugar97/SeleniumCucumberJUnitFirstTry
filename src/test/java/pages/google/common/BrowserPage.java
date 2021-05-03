@@ -10,6 +10,10 @@ public class BrowserPage {
         this.driver = driver;
     }
 
+    public void open(){
+        this.driver.get("https://www.google.com");
+    }
+
     public String getPageTitle() {
         return driver.getTitle();
     }
