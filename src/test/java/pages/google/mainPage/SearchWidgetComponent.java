@@ -18,8 +18,11 @@ public class SearchWidgetComponent extends AbstractComponent {
     public void enter(String query) {
         isDisplayed();
         searchBox.sendKeys(query);
-        searchBox.submit();
 	}
+
+    public void submit() {
+        searchBox.submit();
+    }
 
     @Override
     public boolean isDisplayed() {
