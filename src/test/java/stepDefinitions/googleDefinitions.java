@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.google.common.BrowserPage;
+import pages.google.common.Browser;
 import pages.google.mainPage.MainPage;
 import pages.google.resultsPage.ResultsPage;
 import utils.driver.DriverManager;
@@ -15,19 +15,19 @@ import utils.driver.DriverManager;
 public class googleDefinitions {
 
     MainPage mainPage;
-    BrowserPage browserPage;
+    Browser browser;
     ResultsPage resultsPage;
 
     public googleDefinitions(DriverManager driverManager) {
         WebDriver driver = driverManager.getDriver();
         mainPage = new MainPage(driver);
-        browserPage = new BrowserPage(driver);
+        browser = new Browser(driver);
         resultsPage = new ResultsPage(driver);
     }
 
     @Given("I am on the Google search page")
     public void I_visit_google() {
-        browserPage.open();
+        browser.open();
     }
 
     @When("I search for {string}")
@@ -64,7 +64,7 @@ public class googleDefinitions {
 
     @Then("the page title should start with {string}")
     public void checkTitle(String expected) {
-        String actual = browserPage.getPageTitle();
+        String actual = browser.getPageTitle();
         Assert.assertTrue(StringUtils.containsIgnoreCase(actual, expected));
     }
 }

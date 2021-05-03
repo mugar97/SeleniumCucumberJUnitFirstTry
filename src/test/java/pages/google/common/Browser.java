@@ -2,11 +2,11 @@ package pages.google.common;
 
 import org.openqa.selenium.WebDriver;
 
-public class BrowserPage {
+public class Browser {
 
     private WebDriver driver;
 
-    public BrowserPage(final WebDriver driver) {
+    public Browser(final WebDriver driver) {
         this.driver = driver;
     }
 
