@@ -15,7 +15,7 @@ public class BrowserPage {
     }
 
     public String getPageTitle() {
-        return driver.getTitle();
+        return this.driver.getTitle();
     }
     
 }
