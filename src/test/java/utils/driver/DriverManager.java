@@ -12,6 +12,7 @@ public class DriverManager {
 
     public void init() {
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("headless");
         WebDriverManager.chromedriver().setup();
         this.driver = new ChromeDriver(chromeOptions);
     }
